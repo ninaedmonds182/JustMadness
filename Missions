@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Party Missions — JustMadness</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="justmadness-favicon.svg">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
+.jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
+.jm-nav-left a{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.jm-nav-tag{color:#1a3a5c;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+.jm-nav-mid{display:flex;align-items:center;gap:24px;}
+.jm-nav-mid a{color:#1a3a5c;font-size:14px;font-weight:700;text-decoration:none;}
+.jm-nav-mid a:hover,.jm-nav-mid a.active{color:#E8651A;}
+.jm-nav-right{display:flex;align-items:center;gap:10px;}
+.jm-btn-orange{background:#E8651A;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
+.jm-btn-teal{background:#3A7FA0;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
+.jm-page-hero{background:linear-gradient(160deg,#fff8f2 0%,#e8f4fb 100%);padding:56px 32px;text-align:center;}
+.jm-page-hero h1{font-size:36px;font-weight:900;color:#1a3a5c;margin-bottom:12px;}
+.jm-page-hero p{font-size:16px;color:#557;max-width:480px;margin:0 auto;line-height:1.7;}
+
+/* OUTCOMES */
+.jm-outcomes{background:#fff;padding:48px 32px;}
+.jm-outcomes-inner{max-width:620px;margin:0 auto;}
+.jm-outcomes h2{font-size:24px;font-weight:900;color:#1a3a5c;margin-bottom:8px;}
+.jm-outcomes .sub{font-size:15px;color:#557;margin-bottom:28px;}
+.outcomes-list{display:flex;flex-direction:column;gap:14px;margin-bottom:20px;}
+.outcome-item{display:flex;align-items:flex-start;gap:12px;font-size:16px;font-weight:700;color:#334;line-height:1.5;}
+.outcome-item .tick{color:#2a7a40;font-size:18px;flex-shrink:0;}
+
+/* MISSION CARD */
+.mission-section{padding:48px 32px;background:linear-gradient(135deg,#fff8f0,#e8f4fb);}
+.mission-inner{max-width:640px;margin:0 auto;}
+.big-card{background:#fff;border-radius:20px;border:2px solid #e0eef5;overflow:hidden;box-shadow:0 6px 28px rgba(26,58,92,0.08);}
+.card-header{background:linear-gradient(135deg,#fff8f0,#fde8d0);padding:32px 28px;border-bottom:1.5px solid #f0e8e0;}
+.card-badge{display:inline-block;background:#E8651A;color:#fff;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:20px;padding:4px 14px;margin-bottom:14px;}
+.card-header h2{font-size:26px;font-weight:900;color:#1a3a5c;margin-bottom:10px;}
+.card-header .hook{font-size:15px;color:#557;line-height:1.7;}
+.card-body{padding:28px;}
+.card-story{background:#fff8f0;border-left:4px solid #E8651A;border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:24px;}
+.card-story .lead{font-size:16px;font-weight:900;color:#1a3a5c;margin-bottom:6px;}
+.card-story p{font-size:14px;line-height:1.7;color:#334;font-weight:700;margin:0;}
+.card-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px;padding:18px 0;border-top:1.5px solid #f0e8e0;border-bottom:1.5px solid #f0e8e0;}
+.meta-item{flex:1;min-width:90px;text-align:center;}
+.meta-label{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#889;margin-bottom:4px;}
+.meta-value{font-size:14px;font-weight:900;color:#1a3a5c;line-height:1.4;}
+.meta-note{font-size:10px;color:#889;font-weight:700;margin-top:2px;}
+.card-section-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#889;margin-bottom:12px;}
+.includes-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:24px;}
+.includes-grid div{font-size:14px;font-weight:700;color:#2a7a40;}
+.perfect-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin-bottom:28px;}
+.perfect-grid div{font-size:14px;font-weight:700;color:#1a3a5c;}
+.future-note{text-align:center;font-size:14px;color:#889;font-style:italic;margin-top:28px;}
+
+/* GOOD TO KNOW */
+.good-to-know{background:#f0f8fc;border-radius:16px;padding:28px;margin-top:32px;border:1.5px solid #e0eef5;}
+.good-to-know h3{font-size:16px;font-weight:900;color:#1a3a5c;margin-bottom:20px;}
+.gk-list{display:flex;flex-direction:column;gap:16px;}
+.gk-item{display:flex;align-items:flex-start;gap:14px;}
+.gk-icon{font-size:24px;flex-shrink:0;margin-top:2px;}
+.gk-text{font-size:15px;color:#445;line-height:1.7;font-weight:700;}
+
+.jm-waitlist-box{background:#fff8f0;border:1.5px solid #f5d0a8;border-radius:12px;padding:24px;text-align:center;margin-top:4px;}
+.jm-waitlist-box p{font-size:14px;font-weight:700;color:#1a3a5c;margin-bottom:14px;line-height:1.6;}
+.jm-waitlist-form{display:flex;gap:8px;max-width:400px;margin:0 auto;}
+.jm-waitlist-input{flex:1;border:1.5px solid #ddd;border-radius:30px;padding:10px 16px;font-size:14px;font-family:'Nunito',sans-serif;outline:none;}
+.jm-waitlist-input:focus{border-color:#3A7FA0;}
+.jm-waitlist-btn{background:#E8651A;color:#fff;border:none;border-radius:30px;padding:10px 20px;font-size:14px;font-weight:900;cursor:pointer;font-family:'Nunito',sans-serif;white-space:nowrap;}
+.jm-waitlist-btn:hover{background:#d05413;}
+.jm-footer{background:#1a3a5c;color:#a0bcd0;text-align:center;padding:24px;font-size:13px;}
+.jm-footer a{color:#a0bcd0;}
+
+@media(max-width:700px){
+  .jm-nav{padding:12px 16px;}
+  .jm-nav-mid{display:none;}
+  .mission-section,.jm-outcomes{padding:40px 20px;}
+  .card-meta{gap:8px;}
+  .includes-grid,.perfect-grid,.fit-cols{grid-template-columns:1fr;}
+  .card-body{padding:20px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="jm-nav">
+  <div class="jm-nav-left">
+    <a href="index.html">
+      <img src="justmadness-monogram.svg" alt="JustMadness" style="width:44px;height:44px;">
+      <div class="jm-nav-tag">Mild for Parents. Wild for Kids.</div>
+    </a>
+  </div>
+  <div class="jm-nav-mid">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="missions.html" class="active">Party Missions</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="jm-nav-right">
+    <a href="missions.html" class="jm-btn-orange">Get Your Mission</a>
+    <a href="login.html" class="jm-btn-teal">Enter Code</a>
+  </div>
+</nav>
+
+<div class="jm-page-hero">
+  <h1>Party Missions</h1>
+  <p>A fully interactive mission where children lead every step — from the first clue to the final certificate.</p>
+</div>
+
+<div class="mission-section">
+  <div class="mission-inner">
+    <div class="big-card">
+      <div class="card-header">
+        <div class="card-badge">Available now</div>
+        <h2>🐾 Dog's Bakery</h2>
+        <div class="hook">The children take control. The videos guide them through baking, physical challenges and mission after mission — while the adults sit back and watch it unfold.</div>
+      </div>
+      <div class="card-body">
+        <div class="card-story">
+          <p class="lead">Dog Baking School is in chaos.</p>
+          <p>Professor Baker's invention just scattered secret recipe codes all over the bakery. The children must find every code, complete every challenge and save the Grand Bake-Off before time runs out.</p>
+        </div>
+        <div class="card-meta">
+          <div class="meta-item"><div class="meta-label">Age</div><div class="meta-value">8–12</div></div>
+          <div class="meta-item"><div class="meta-label">Players</div><div class="meta-value">4–12</div></div>
+          <div class="meta-item"><div class="meta-label">Baking</div><div class="meta-value">~4 hrs</div><div class="meta-note">incl. decorating</div></div>
+          <div class="meta-item"><div class="meta-label">Decorating</div><div class="meta-value">~3 hrs</div><div class="meta-note">decoration only</div></div>
+          <div class="meta-item"><div class="meta-label">Setup</div><div class="meta-value">~1 hr</div></div>
+        </div>
+        <div class="card-section-title">What's included</div>
+        <div class="includes-grid">
+          <div>✓ Interactive story videos</div>
+          <div>✓ Children's personalised names</div>
+          <div>✓ Real-world team missions</div>
+          <div>✓ Physical challenge guides</div>
+          <div>✓ Printable clues and codes</div>
+          <div>✓ Auto-generated shopping list</div>
+          <div>✓ Personalised certificates</div>
+          <div>✓ Full parent setup guide</div>
+        </div>
+        <div class="card-section-title">Perfect for</div>
+        <div class="perfect-grid">
+          <div>🎂 Birthday parties</div>
+          <div>👨‍👩‍👧 Family gatherings</div>
+          <div>☀️ School holiday activities</div>
+          <div>🌧️ Rainy day rescues</div>
+        </div>
+        <div class="jm-waitlist-box">
+          <p>🐾 <strong>Dog's Bakery is entering its final testing phase!</strong><br>Drop your email below to be notified the moment it launches — and claim an early-bird discount.</p>
+          <div class="jm-waitlist-form">
+            <input class="jm-waitlist-input" type="email" placeholder="Enter your email" />
+            <button class="jm-waitlist-btn" type="button">Join the Launch List</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="good-to-know">
+      <h3>Good to know before you buy</h3>
+      <div class="gk-list">
+        <div class="gk-item">
+          <div class="gk-icon">🛒</div>
+          <div class="gk-text">Most of what you need is already at home. Anything else can be picked up with your regular food shop — no specialist supplies, no extra trips.</div>
+        </div>
+        <div class="gk-item">
+          <div class="gk-icon">🖨️</div>
+          <div class="gk-text">A printer is helpful but not essential — we'll tell you exactly what needs printing and what doesn't.</div>
+        </div>
+        <div class="gk-item">
+          <div class="gk-icon">🧊</div>
+          <div class="gk-text">A freezer makes one of the Bonkers challenges significantly more impressive. If you have one, use it. If not, the mission works perfectly without it.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="future-note">More missions are on their way. Same chaos. New stories.</p>
+  </div>
+</div>
+
+<div class="jm-footer">
+  &copy; 2026 JustMadness &nbsp;&middot;&nbsp; <a href="mailto:info@justmadness.co.uk">info@justmadness.co.uk</a> &nbsp;&middot;&nbsp; Mild for Parents. Wild for Kids.
+</div>
+
+</body>
+</html>
