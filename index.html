@@ -1,319 +1,196 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JustMadness — Mild for Parents. Wild for Kids.</title>
+<title>JustMadness — The Party Children Can Run Themselves</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="justmadness-favicon.svg">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 
 /* NAV */
 .jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
-.jm-logo-just{color:#E8651A;font-size:26px;font-weight:900;}
-.jm-logo-mad{color:#3A7FA0;font-size:26px;font-weight:900;}
+.jm-nav-left a{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .jm-nav-tag{color:#1a3a5c;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
-.jm-btn-nav{background:#E8651A;color:#fff;border:none;border-radius:30px;padding:9px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;}
+.jm-nav-mid{display:flex;align-items:center;gap:24px;}
+.jm-nav-mid a{color:#1a3a5c;font-size:14px;font-weight:700;text-decoration:none;}
+.jm-nav-mid a:hover,.jm-nav-mid a.active{color:#E8651A;}
+.jm-nav-right{display:flex;align-items:center;gap:10px;}
+.jm-btn-orange{background:#E8651A;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
+.jm-btn-teal{background:#3A7FA0;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
 
 /* HERO */
-.jm-hero{background:linear-gradient(160deg,#fff8f2 0%,#e8f4fb 100%);padding:60px 32px;text-align:center;}
-.jm-hero-logo img{max-width:320px;width:100%;height:auto;margin-bottom:16px;}
-.jm-hero-tag{color:#1a3a5c;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:28px;}
-.jm-hero-prose{max-width:520px;margin:0 auto;}
-.jm-hero-prose p{font-size:17px;line-height:1.75;color:#334;margin-bottom:10px;}
-.jm-hero-prose .big{font-size:22px;font-weight:900;color:#1a3a5c;margin:18px 0 8px;}
-.jm-hero-btn{display:inline-block;background:#E8651A;color:#fff;border:none;border-radius:40px;padding:15px 36px;font-size:17px;font-weight:900;cursor:pointer;font-family:'Nunito',sans-serif;margin-top:28px;}
+.jm-hero .hero-opening{max-width:500px;margin:0 auto 28px;padding:24px 28px;background:rgba(255,255,255,0.6);border-radius:16px;border:1.5px solid #f0e8e0;}
+.jm-hero .hero-opening p{font-size:18px;line-height:1.8;color:#334;margin-bottom:8px;}
+.jm-hero .hero-opening p:last-child{margin-bottom:0;font-size:19px;color:#1a3a5c;}
+.jm-hero .hero-opening strong{color:#E8651A;}
+.jm-hero{background:linear-gradient(160deg,#fff8f2 0%,#e8f4fb 100%);padding:80px 32px;text-align:center;}
+.jm-hero img.logo{max-width:340px;width:100%;height:auto;margin-bottom:32px;}
+.jm-hero h1{font-size:38px;font-weight:900;color:#1a3a5c;line-height:1.2;margin-bottom:16px;}
+.jm-hero h1 span{color:#E8651A;}
+.jm-hero .hero-emotion{font-size:18px;color:#445;line-height:1.8;max-width:500px;margin:0 auto 20px;}
+.jm-hero .hero-dream{max-width:500px;margin:0 auto 28px;background:rgba(255,255,255,0.7);border-radius:16px;padding:20px 24px;border:1.5px solid #f0e8e0;}
+.jm-hero .hero-dream p{font-size:16px;line-height:1.8;color:#334;margin-bottom:8px;}
+.jm-hero .hero-dream p:last-child{margin-bottom:0;}
+.jm-hero .hero-guide{font-size:14px;color:#3A7FA0;font-weight:700;font-style:italic;margin-bottom:32px;}
+.jm-hero .hero-note{font-size:15px;color:#557;margin-bottom:32px;}
+.jm-hero-btn{display:inline-block;background:#E8651A;color:#fff;border-radius:40px;padding:16px 40px;font-size:18px;font-weight:900;font-family:'Nunito',sans-serif;text-decoration:none;}
 
-/* CREATOR */
-.jm-creator{background:#fff;padding:56px 32px;max-width:620px;margin:0 auto;}
-.jm-creator-badge{display:inline-block;background:#fff8f0;color:#E8651A;border:1.5px solid #f5d0a8;border-radius:30px;padding:6px 18px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;}
-.jm-creator h2{font-size:26px;font-weight:900;color:#1a3a5c;margin-bottom:18px;line-height:1.3;}
-.jm-creator p{font-size:16px;line-height:1.8;color:#445;margin-bottom:14px;}
-.jm-creator .highlight{background:#fff8f0;border-left:4px solid #E8651A;border-radius:0 10px 10px 0;padding:16px 20px;margin:24px 0;font-size:16px;font-weight:700;color:#1a3a5c;line-height:1.6;}
+/* SCREEN STRIP — moved up, directly under hero */
+.jm-strip{background:#1a3a5c;padding:40px 32px;text-align:center;}
+.jm-strip .big{font-size:24px;font-weight:900;color:#fff;max-width:560px;margin:0 auto 12px;line-height:1.4;}
+.jm-strip .big span{color:#E8651A;}
+.jm-strip .mid{font-size:15px;color:#a0bcd0;max-width:480px;margin:0 auto 12px;line-height:1.6;}
+.jm-strip .quote{font-size:15px;color:#fff;font-weight:700;max-width:500px;margin:16px auto 0;line-height:1.6;font-style:italic;}
 
-/* GRASSHOPPER */
-.jm-grasshopper{background:#1a3a5c;padding:56px 32px;}
-.jm-grasshopper-inner{max-width:620px;margin:0 auto;}
-.jm-grasshopper h2{font-size:26px;font-weight:900;color:#fff;margin-bottom:20px;line-height:1.3;}
-.jm-grasshopper p{font-size:16px;line-height:1.8;color:#a0bcd0;margin-bottom:14px;}
-.party-timeline{background:rgba(255,255,255,0.06);border-radius:14px;padding:24px;margin:28px 0;border:1px solid rgba(255,255,255,0.1);}
-.party-timeline p{font-size:15px;color:#c8dde8;margin-bottom:8px;font-weight:700;}
-.step{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
-.step .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:6px;}
-.party-timeline .dot{background:#3A7FA0;}
-.party-timeline span{font-size:14px;color:#a0bcd0;line-height:1.5;}
-.vs{display:flex;align-items:center;gap:12px;margin:28px 0;}
-.vs-line{flex:1;height:1px;background:rgba(255,255,255,0.1);}
-.vs-badge{background:#E8651A;color:#fff;font-size:13px;font-weight:900;padding:6px 16px;border-radius:30px;white-space:nowrap;}
-.jm-timeline{background:rgba(232,101,26,0.12);border-radius:14px;padding:24px;border:1px solid rgba(232,101,26,0.3);}
-.jm-timeline p{font-size:15px;color:#f5c8a0;margin-bottom:8px;font-weight:700;}
-.jm-timeline .dot{background:#E8651A;}
-.jm-timeline span{font-size:14px;color:#f5c8a0;line-height:1.5;}
-.closing{font-size:17px;color:#fff;font-weight:700;line-height:1.7;margin-top:28px;}
+/* WHY PARENTS LOVE IT */
+.jm-why{padding:64px 32px;background:#fff;}
+.jm-why-inner{max-width:600px;margin:0 auto;}
+.jm-why h2{font-size:28px;font-weight:900;color:#1a3a5c;margin-bottom:8px;}
+.jm-why .sub{font-size:15px;color:#557;margin-bottom:32px;}
+.jm-why-list{display:flex;flex-direction:column;gap:16px;margin-bottom:24px;}
+.jm-why-item{display:flex;align-items:flex-start;gap:14px;}
+.jm-why-item .icon{font-size:20px;flex-shrink:0;margin-top:3px;}
+.jm-why-item p{font-size:16px;font-weight:700;color:#334;line-height:1.5;margin:0;}
+.jm-why .best-line{font-size:17px;font-weight:900;color:#1a3a5c;text-align:center;margin-top:28px;padding:20px 24px;background:#fff8f0;border-radius:12px;border-left:4px solid #E8651A;line-height:1.6;text-align:left;}
 
-/* WHAT */
-.jm-what{background:linear-gradient(135deg,#fff8f0,#e8f4fb);padding:56px 32px;}
-.jm-what-inner{max-width:620px;margin:0 auto;}
-.jm-what h2{font-size:26px;font-weight:900;color:#1a3a5c;margin-bottom:8px;}
-.jm-what .sub{color:#557;font-size:15px;margin-bottom:32px;}
-.jm-what p{font-size:16px;line-height:1.8;color:#445;margin-bottom:14px;}
-.jm-pillars{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:32px 0;}
-.jm-pillar{background:#fff;border-radius:14px;padding:22px 18px;border:1.5px solid #e0eef5;}
-.jm-pillar .icon{font-size:34px;margin-bottom:10px;}
-.jm-pillar h3{font-size:16px;font-weight:900;color:#1a3a5c;margin-bottom:6px;}
-.jm-pillar p{font-size:13px;color:#557;line-height:1.6;margin:0;}
-.jm-pillar .tag{display:inline-block;background:#fff8f0;color:#E8651A;border-radius:20px;padding:3px 10px;font-size:11px;font-weight:700;margin-bottom:8px;}
+/* ASPIRATION */
+.jm-aspiration{background:linear-gradient(135deg,#fff8f0,#e8f4fb);padding:64px 32px;}
+.jm-aspiration-inner{max-width:600px;margin:0 auto;}
+.jm-aspiration h2{font-size:28px;font-weight:900;color:#1a3a5c;margin-bottom:8px;}
+.jm-aspiration .sub{font-size:15px;color:#557;margin-bottom:28px;}
+.jm-aspiration p{font-size:16px;line-height:1.8;color:#445;margin-bottom:14px;}
+.jm-aspiration-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:28px 0;}
+.jm-aspiration-col{background:#fff;border-radius:14px;padding:22px 18px;border:1.5px solid #e0eef5;}
+.jm-aspiration-col h3{font-size:15px;font-weight:900;margin-bottom:14px;color:#889;}
+.jm-aspiration-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.jm-aspiration-col.in h3{color:#2a7a40;}
+.jm-aspiration-col ul li{font-size:14px;font-weight:700;line-height:1.4;color:#557;}
+.jm-aspiration-col.in ul li{color:#2a7a40;}
+.jm-aspiration p.note{font-size:15px;color:#557;font-style:italic;text-align:center;}
 
-/* CONTROL */
-.jm-control{background:#fff;padding:56px 32px;}
-.jm-control-inner{max-width:600px;margin:0 auto;}
-.jm-control h2{font-size:26px;font-weight:900;color:#1a3a5c;margin-bottom:8px;}
-.jm-control .sub{color:#557;font-size:15px;margin-bottom:32px;}
-.jm-control p{font-size:16px;line-height:1.8;color:#445;margin-bottom:14px;}
-.jm-levels{display:flex;gap:12px;margin:28px 0;}
-.jm-level{flex:1;border-radius:14px;padding:18px 14px;text-align:center;border:2px solid transparent;}
-.jm-level.mild{background:#e8f4fb;border-color:#b0d4e8;}
-.jm-level.mad{background:#fff3e0;border-color:#f5c07a;}
-.jm-level.bonkers{background:#fdecea;border-color:#f5a0a0;}
-.jm-level .lvl-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
-.jm-level.mild .lvl-label{color:#3A7FA0;}
-.jm-level.mad .lvl-label{color:#c07a20;}
-.jm-level.bonkers .lvl-label{color:#c04040;}
-.jm-level .lvl-icon{font-size:28px;margin-bottom:8px;}
-.jm-level h3{font-size:14px;font-weight:900;color:#1a3a5c;margin-bottom:4px;}
-.jm-level p{font-size:12px;color:#667;line-height:1.4;margin:0;}
+/* SETUP */
+.jm-setup{padding:64px 32px;background:#fff;}
+.jm-setup-inner{max-width:600px;margin:0 auto;}
+.jm-setup h2{font-size:28px;font-weight:900;color:#1a3a5c;margin-bottom:8px;}
+.jm-setup .sub{font-size:15px;color:#557;margin-bottom:24px;}
+.jm-setup p{font-size:16px;line-height:1.8;color:#445;margin-bottom:14px;}
+.jm-setup-list{display:flex;flex-direction:column;gap:10px;margin:20px 0;}
+.jm-setup-item{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:700;color:#334;}
+.jm-setup-item .dot{width:10px;height:10px;background:#3A7FA0;border-radius:50%;flex-shrink:0;}
+.jm-setup .payoff{font-size:17px;font-weight:900;color:#1a3a5c;margin-top:24px;line-height:1.5;}
 
-/* PARENTS */
-.jm-parents{background:linear-gradient(135deg,#fff8f0,#e8f4fb);padding:56px 32px;}
-.jm-parents-inner{max-width:580px;margin:0 auto;}
-.jm-parents h2{font-size:26px;font-weight:900;color:#1a3a5c;margin-bottom:24px;}
-.jm-parents p{font-size:16px;line-height:1.8;color:#445;margin-bottom:14px;}
-.jm-stat-row{display:flex;gap:12px;margin:28px 0;flex-wrap:wrap;}
-.jm-stat{flex:1;min-width:110px;background:#fff;border-radius:12px;padding:16px;text-align:center;border:1.5px solid #f5d5b8;}
-.jm-stat .num{font-size:26px;font-weight:900;color:#E8651A;}
-.jm-stat .label{font-size:11px;color:#557;margin-top:4px;font-weight:700;line-height:1.4;}
+/* CLOSING */
+.jm-closing{background:#1a3a5c;padding:64px 32px;text-align:center;}
+.jm-closing-inner{max-width:540px;margin:0 auto;}
+.jm-closing h2{font-size:28px;font-weight:900;color:#fff;margin-bottom:24px;line-height:1.3;}
+.jm-closing .candles{font-size:18px;color:#a0bcd0;line-height:1.8;margin-bottom:8px;}
+.jm-closing .big-line{font-size:21px;font-weight:900;color:#E8651A;margin:24px 0;line-height:1.4;}
+.jm-closing-btn{display:inline-block;background:#E8651A;color:#fff;border-radius:40px;padding:15px 36px;font-size:17px;font-weight:900;text-decoration:none;font-family:'Nunito',sans-serif;}
 
-/* INCLUDES */
-.jm-includes{background:#fff;padding:56px 32px;}
-.jm-includes-inner{max-width:600px;margin:0 auto;}
-.jm-includes h2{font-size:26px;font-weight:900;color:#1a3a5c;margin-bottom:28px;}
-.jm-inc-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.jm-inc-item{display:flex;align-items:center;gap:10px;font-size:15px;color:#334;font-weight:700;}
-.jm-inc-item .dot{width:10px;height:10px;background:#E8651A;border-radius:50%;flex-shrink:0;}
-
-/* GAME */
-.jm-game{background:#f7fbfd;padding:40px 32px;border-top:2px solid #e0eef5;}
-.jm-game-inner{max-width:560px;margin:0 auto;display:flex;gap:24px;align-items:center;}
-.jm-game-icon{width:90px;height:90px;border-radius:16px;background:linear-gradient(135deg,#E8651A,#f5a05a);display:flex;align-items:center;justify-content:center;font-size:44px;flex-shrink:0;}
-.jm-game-info h3{font-size:22px;font-weight:900;color:#1a3a5c;margin-bottom:4px;}
-.jm-game-info p{font-size:14px;color:#557;margin-bottom:12px;line-height:1.5;}
-.jm-coming-tape{display:inline-block;background:#E8651A;color:#fff;font-size:18px;font-weight:900;letter-spacing:3px;text-transform:uppercase;padding:12px 32px;border-radius:6px;transform:rotate(-3deg);margin-top:12px;box-shadow:3px 3px 10px rgba(0,0,0,0.25);}
-
-/* ACCESS */
-.jm-access{background:#fff8f0;padding:32px;text-align:center;border-top:1.5px solid #f5d5b8;}
-.jm-access p{font-size:15px;font-weight:700;color:#1a3a5c;margin-bottom:14px;}
-.jm-access-row{display:flex;gap:10px;max-width:380px;margin:0 auto;}
-.jm-input{flex:1;border:1.5px solid #ddd;border-radius:30px;padding:11px 18px;font-size:14px;font-family:'Nunito',sans-serif;outline:none;}
-.jm-input:focus{border-color:#3A7FA0;}
-.jm-play-btn{background:#3A7FA0;color:#fff;border:none;border-radius:30px;padding:11px 22px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;}
-
-/* FOOTER */
-.jm-footer{background:#1a3a5c;color:#a0bcd0;text-align:center;padding:24px;font-size:13px;}
+.jm-footer{background:#1a3a5c;color:#a0bcd0;text-align:center;padding:24px;font-size:13px;border-top:1px solid rgba(255,255,255,0.08);}
 .jm-footer a{color:#a0bcd0;}
 
-/* MOBILE */
-@media(max-width:600px){
-  .jm-nav{padding:14px 16px;}
-  .jm-btn-nav{display:none;}
-  .jm-hero{padding:40px 20px;}
-  .jm-hero-logo img{max-width:250px;}
-  .jm-creator,.jm-grasshopper-inner,.jm-what-inner,.jm-control-inner,.jm-parents-inner,.jm-includes-inner{padding:0 4px;}
-  .jm-pillars{grid-template-columns:1fr;}
-  .jm-levels{flex-direction:column;gap:12px;}
-  .jm-inc-list{grid-template-columns:1fr;}
-  .jm-game-inner{flex-direction:column;text-align:center;}
-  .jm-access-row{flex-direction:column;}
-  .jm-stat-row{gap:8px;}
+@media(max-width:700px){
+  .jm-nav{padding:12px 16px;flex-wrap:wrap;gap:8px;}
+  .jm-nav-mid{display:none;}
+  .jm-hero{padding:48px 20px;}
+  .jm-hero img.logo{max-width:240px;}
+  .jm-hero h1{font-size:28px;}
+  .jm-aspiration-cols{grid-template-columns:1fr;}
+  .jm-why,.jm-aspiration,.jm-setup,.jm-closing{padding:48px 20px;}
 }
 </style>
 </head>
 <body>
 
 <nav class="jm-nav">
-  <div>
-    <span class="jm-logo-just">Just</span><span class="jm-logo-mad">Madness</span>
-    <div class="jm-nav-tag">Mild for Parents. Wild for Kids.</div>
+  <div class="jm-nav-left">
+    <a href="index.html">
+      <img src="justmadness-monogram.svg" alt="JustMadness" style="width:44px;height:44px;">
+      <div class="jm-nav-tag">Mild for Parents. Wild for Kids.</div>
+    </a>
   </div>
-  <button class="jm-btn-nav">Start your mission</button>
+  <div class="jm-nav-mid">
+    <a href="index.html" class="active">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="missions.html">Party Missions</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="jm-nav-right">
+    <a href="missions.html" class="jm-btn-orange">Get Your Mission</a>
+    <a href="login.html" class="jm-btn-teal">Enter Code</a>
+  </div>
 </nav>
 
+<!-- HERO -->
 <div class="jm-hero">
-  <div class="jm-hero-logo">
-    <img src="image_d93ebf.jpg" alt="JustMadness — Mild for Parents. Wild for Kids.">
+  <img class="logo" src="justmadness-wordmark.svg" alt="JustMadness">
+  <div class="hero-opening">
+    <p>Imagine a birthday party where children don't wait to be entertained&hellip;</p>
+    <p>They solve clues. Make decisions. Work together. Laugh together.</p>
+    <p><strong>At JustMadness, they don't watch the adventure. They lead it.</strong></p>
   </div>
-  <div class="jm-hero-tag">Mild for Parents. Wild for Kids.</div>
-  <div class="jm-hero-prose">
-    <p>Every generation has its magic. Ours was cardboard spaceships, garden jungles and afternoons lost to a single clue hidden somewhere in the house.</p>
-    <p>Today's kids have grown up in a different world — curious, creative, and completely at home with technology. And that's not a problem to solve. It's something to work with.</p>
-    <p>JustMadness brings both worlds together. Children use a device to follow their mission — but the mission sends them running, searching, baking, decorating and competing in the real world. Screen time with a purpose. The screen leads the mission. The mission leads to memories.</p>
-    <p class="big">Welcome to JustMadness — where children come with a purpose, leave with a story, pick up real life skills along the way, and talk about it for weeks.</p>
-    <button class="jm-hero-btn">Start your mission</button>
+  <h1>The party<br><span>children can run themselves.</span></h1>
+  <div class="hero-emotion">No entertainer. No parent directing every game.<br>Just a mission they'll lead from beginning to end.</div>
+  <div class="hero-dream">
+    <p>Every clue they solve unlocks the next challenge.</p>
+    <p>Every challenge brings them closer to completing the mission.</p>
+    <p>While you enjoy watching them take over.</p>
   </div>
+  <div class="hero-guide">Short videos. Real games. Children up, moving and laughing together.</div>
+  <a href="missions.html" class="jm-hero-btn">Get Your Mission</a>
 </div>
 
-<div class="jm-creator">
-  <div class="jm-creator-badge">Why I built this</div>
-  <h2>Children don't remember perfect parties.<br>They remember the ridiculous moments.</h2>
-  <p>Hi. I'm the slightly unhinged person behind JustMadness.</p>
-  <p>Nobody grows up saying <em>"I remember that party where the tablecloth matched the balloons."</em></p>
-  <p>They remember the flour explosion. The clue nobody could solve. The moment everyone screamed at once.</p>
-  <p>Those are the stories still being told ten years later. So I stopped making printable worksheets and built something worth remembering instead.</p>
-  <div class="highlight">Not just for birthday parties — brilliant for family gatherings, BBQs, school holidays, or any day that deserves to be more than just an afternoon.<br><br>Created by a parent who wanted to build the kind of experiences they always wished existed as a child. Not another worksheet. Not another app. A proper mission.</div>
+<!-- SCREEN STRIP — directly under hero -->
+<div class="jm-strip">
+  <div class="big">A few minutes on screen. <span>Hours of real play.</span></div>
+  <div class="mid">Children watch a short video to unlock each mission. Then they put the device down and get on with the chaos.</div>
+  <div class="quote">"The device doesn't entertain the children. It tells them what ridiculous thing to do next. And you decide exactly how ridiculous that gets."</div>
 </div>
 
-<div class="jm-grasshopper">
-  <div class="jm-grasshopper-inner">
-    <h2>Most kids' parties look exactly like this.</h2>
-    <p>You've been to them. You've probably hosted one. Everyone has. And there's nothing wrong with them — except that nobody really remembers them.</p>
-    <div class="party-timeline">
-      <p>The typical kids' party, in five unavoidable stages:</p>
-      <div class="step"><div class="dot"></div><span>Children arrive in a burst of energy and immediately scatter in seventeen directions</span></div>
-      <div class="step"><div class="dot"></div><span>Someone makes a mess. Then everyone makes a mess. The mess is enormous.</span></div>
-      <div class="step"><div class="dot"></div><span>Food appears. Children eat approximately four bites and declare themselves full.</span></div>
-      <div class="step"><div class="dot"></div><span>More mess. A brief argument. Someone cries. Someone wins. Nobody remembers why.</span></div>
-      <div class="step"><div class="dot"></div><span>Parents arrive. Children leave. You survey the damage. It's been two hours.</span></div>
+<!-- WHY PARENTS LOVE IT -->
+<div class="jm-why">
+  <div class="jm-why-inner">
+    <h2>Why parents love it.</h2>
+    <p class="sub">You set it up. Then you step back and watch them become the heroes.</p>
+    <div class="jm-why-list">
+      <div class="jm-why-item"><div class="icon">✅</div><p>Children lead the mission from start to finish — no adults needed to keep the energy going.</p></div>
+      <div class="jm-why-item"><div class="icon">✅</div><p>Everything is guided step by step — what to prepare, where to put it, how long it takes.</p></div>
+      <div class="jm-why-item"><div class="icon">✅</div><p>One supermarket shop covers everything. Most of what you need is probably already at home.</p></div>
+      <div class="jm-why-item"><div class="icon">✅</div><p>Works indoors or outdoors — you choose how much space the madness is allowed to use.</p></div>
+      <div class="jm-why-item"><div class="icon">✅</div><p>You choose the difficulty. They work together and run wild with whatever you give them.</p></div>
     </div>
-    <p>Two hours of perfectly enjoyable chaos — and then it's over. No story. No shared achievement. No moment that gets retold at the dinner table three weeks later.</p>
-    <div class="vs"><div class="vs-line"></div><div class="vs-badge">JustMadness is different</div><div class="vs-line"></div></div>
-    <div class="jm-timeline">
-      <p>A JustMadness mission gives the party a purpose:</p>
-      <div class="step"><div class="dot"></div><span>Children arrive and immediately have a mission. They know what they're here to do.</span></div>
-      <div class="step"><div class="dot"></div><span>They work in teams, compete, complete physical challenges, crack codes, earn the next step.</span></div>
-      <div class="step"><div class="dot"></div><span>They bake something real. They decorate it. They judge each other with great seriousness.</span></div>
-      <div class="step"><div class="dot"></div><span>They earn certificates with their actual names on. They feel like they genuinely achieved something.</span></div>
-      <div class="step"><div class="dot"></div><span>They go home and tell their parents exactly what happened. In detail. For days.</span></div>
-    </div>
-    <p class="closing">That's what a party should be. Not just an afternoon — an experience with a beginning, a middle, and an ending worth talking about.</p>
+    <div class="best-line">The screen is simply the mission guide.<br>The mission happens everywhere else.</div>
   </div>
 </div>
 
-<div class="jm-what">
-  <div class="jm-what-inner">
-    <h2>What exactly is a JustMadness mission?</h2>
-    <p class="sub">It's not one thing. That's the whole point.</p>
-    <p>Imagine the Great British Bake Off — but the contestants are aged 8 to 12, running on birthday cake sugar, competing in teams, and someone just found a clue hidden under the mixing bowl.</p>
-    <p>A JustMadness mission is a baking competition, a physical challenge, a code-cracking game and a comedy show all happening at the same time — indoors, outdoors, or both. Wherever the madness is allowed to spread is entirely up to you.</p>
-    <p>Children follow missions on a device and get physical — running, searching, carrying, balancing — to unlock each step. Then they bake real things, decorate real cakes, and earn real certificates at the end. It is genuinely funny. Loud. Completely mad. And entirely led by the children — which is exactly why it works.</p>
-    <div class="jm-pillars">
-      <div class="jm-pillar">
-        <div class="tag">Bake-off energy</div>
-        <div class="icon">🎂</div>
-        <h3>Real baking. Real competition.</h3>
-        <p>Teams bake against each other with actual recipes and actual ingredients. The results are judged. Opinions are strong. Icing is everywhere.</p>
-      </div>
-      <div class="jm-pillar">
-        <div class="tag">Mission-based</div>
-        <div class="icon">🔐</div>
-        <h3>Each step must be earned.</h3>
-        <p>Children don't just follow a recipe. They complete missions — crack codes, find clues, pass challenges — to unlock each stage of the bake.</p>
-      </div>
-      <div class="jm-pillar">
-        <div class="tag">Device-guided</div>
-        <div class="icon">📱</div>
-        <h3>The device runs the show.</h3>
-        <p>Instructions and missions are delivered through a screen. Children follow independently. No adult required to stand in the middle explaining anything.</p>
-      </div>
-      <div class="jm-pillar">
-        <div class="tag">Physically mad</div>
-        <div class="icon">🏃</div>
-        <h3>They actually move. A lot.</h3>
-        <p>Challenges involve the whole body — running, balancing, carrying, searching. Indoors, outdoors, or both. It is as funny to watch as it sounds.</p>
-      </div>
+<!-- SETUP HONESTY -->
+<div class="jm-setup">
+  <div class="jm-setup-inner">
+    <h2>Yes... you'll need to do a little setup.</h2>
+    <p class="sub">No hiding it. But we've done the thinking for you.</p>
+    <p>You'll know exactly:</p>
+    <div class="jm-setup-list">
+      <div class="jm-setup-item"><div class="dot"></div>What to set up and where</div>
+      <div class="jm-setup-item"><div class="dot"></div>What equipment you'll need</div>
+      <div class="jm-setup-item"><div class="dot"></div>How long it takes</div>
+      <div class="jm-setup-item"><div class="dot"></div>How to make it easier</div>
+      <div class="jm-setup-item"><div class="dot"></div>Or how to make it completely bonkers</div>
     </div>
+    <p class="payoff">Spend a little time preparing.<br>Then enjoy watching the children take control.</p>
   </div>
 </div>
 
-<div class="jm-control">
-  <div class="jm-control-inner">
-    <h2>You set the madness level. They run wild with it.</h2>
-    <p class="sub">Before the mission begins, you're in charge. You decide how chaotic this gets.</p>
-    <p>During setup you pick everything — the type of cakes, the recipes, the teams, every child's name. You choose how much madness you're prepared to unleash. Then you hand it over.</p>
-    <p>And that's when the real chaos begins.</p>
-    <div class="jm-levels">
-      <div class="jm-level mild">
-        <div class="lvl-label">Level 1</div>
-        <div class="lvl-icon">😌</div>
-        <h3>Mild</h3>
-        <p>Manageable chaos. Things will probably be fine.</p>
-      </div>
-      <div class="jm-level mad">
-        <div class="lvl-label">Level 2</div>
-        <div class="lvl-icon">😄</div>
-        <h3>Mad</h3>
-        <p>Things are getting interesting. Aprons recommended.</p>
-      </div>
-      <div class="jm-level bonkers">
-        <div class="lvl-label">Level 3</div>
-        <div class="lvl-icon">🤪</div>
-        <h3>Bonkers</h3>
-        <p>Full chaos. You asked for this. We warned you.</p>
-      </div>
-    </div>
-    <p>You also choose the cakes. Cupcakes, layer cakes, biscuits — you pick what gets made and decorated. The children discover their mission and immediately decide they know better than any recipe. They're not entirely wrong.</p>
-  </div>
-</div>
-
-<div class="jm-parents">
-  <div class="jm-parents-inner">
-    <h2>Because you deserve to enjoy the party too.</h2>
-    <p>The last thing you need is an activity that requires you to stand in the middle explaining rules every five minutes while a small child tugs on your sleeve asking if it's their turn yet.</p>
-    <p>Allow around an hour of preparation — time on the device to set up names, teams and cake choices, plus getting the space ready for the challenges. Every ingredient is available from your regular supermarket — no specialist shops, no ordering online, no last-minute panic. Just a shopping list we generate for you automatically.</p>
-    <p>Choose your experience: the full baking mission runs for around 4 hours — baking, challenges and decorating all included. Or if you prefer to focus purely on cake decorating, that experience runs for around 3 hours. Two different days. Two very different kinds of mess.</p>
-    <p>During the party the missions run themselves. You won't be standing in the middle explaining rules — though you'll want to stay nearby for quick resets between missions and to keep an eye on the oven. Baking with children is brilliant. Unsupervised baking with children is a different kind of adventure entirely.</p>
-    <div class="jm-stat-row">
-      <div class="jm-stat"><div class="num">~1hr</div><div class="label">of preparation</div></div>
-      <div class="jm-stat"><div class="num">4h</div><div class="label">full baking experience</div></div>
-      <div class="jm-stat"><div class="num">3h</div><div class="label">decorating only experience</div></div>
-      <div class="jm-stat"><div class="num">∞</div><div class="label">memories made</div></div>
-    </div>
-    <p>That's a full day of childhood magic for 20 minutes of your time. Not bad at all.</p>
-  </div>
-</div>
-
-<div class="jm-includes">
-  <div class="jm-includes-inner">
-    <h2>What's included with every mission</h2>
-    <div class="jm-inc-list">
-      <div class="jm-inc-item"><div class="dot"></div>Full baking or decorating mission</div>
-      <div class="jm-inc-item"><div class="dot"></div>Animated story and characters</div>
-      <div class="jm-inc-item"><div class="dot"></div>Device-guided video missions</div>
-      <div class="jm-inc-item"><div class="dot"></div>Physical challenge guides</div>
-      <div class="jm-inc-item"><div class="dot"></div>Printable clues and codes</div>
-      <div class="jm-inc-item"><div class="dot"></div>Auto-generated shopping list</div>
-      <div class="jm-inc-item"><div class="dot"></div>Personalised certificates</div>
-      <div class="jm-inc-item"><div class="dot"></div>Full setup guide</div>
-    </div>
-  </div>
-</div>
-
-<div class="jm-game">
-  <div class="jm-game-inner">
-    <div class="jm-game-icon">🐾</div>
-    <div class="jm-game-info">
-      <h3>Dog's Bakery</h3>
-      <p>The first JustMadness mission. Kids become trainee bakers competing for the most demanding customers in town. Baking, decorating, physical challenges and certificates — all in one unforgettable day.</p>
-      <div class="jm-coming-tape">Coming Soon</div>
-    </div>
-  </div>
-</div>
-
-<div class="jm-access">
-  <p>Already bought a mission? Enter your access code below.</p>
-  <div class="jm-access-row">
-    <input class="jm-input" type="text" placeholder="Enter your code here" />
-    <button class="jm-play-btn">Play</button>
+<!-- CLOSING -->
+<div class="jm-closing">
+  <div class="jm-closing-inner">
+    <h2>When the candles are blown out...</h2>
+    <div class="candles">They won't remember watching a show.<br>They won't remember sitting around waiting for their turn.<br>They'll remember the mission they led together.</div>
+    <div class="big-line">That's what JustMadness is for.</div>
+    <a href="missions.html" class="jm-closing-btn">Get Your Mission</a>
   </div>
 </div>
 
