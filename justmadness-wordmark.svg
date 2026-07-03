@@ -1,10 +1,14 @@
-<svg viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
-  <title>JustMadness</title>
-  <text x="10" y="140" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700" letter-spacing="1" fill="#E97D1F">
-    <tspan dy="0">J</tspan><tspan dy="1">u</tspan><tspan dy="1">s</tspan><tspan dy="0">t</tspan>
+<svg viewBox="0 0 500 210" xmlns="http://www.w3.org/2000/svg">
+  <title>JustMadness — Mild for Parents. Wild for Kids.</title>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Chewy&amp;display=swap');</style>
+  </defs>
+  <path d="M 66 38 Q 155 30 238 34 Q 330 30 428 36 Q 436 60 432 80 Q 436 122 430 142 Q 318 148 232 144 Q 140 150 64 143 Q 56 96 60 78 Q 56 52 66 38 Z" fill="none" stroke="#1F3864" stroke-width="7" stroke-linejoin="round"/>
+  <text x="88" y="106" font-size="50" font-family="'Chewy', cursive" fill="#E97D1F" letter-spacing="2">
+    <tspan rotate="-4">J</tspan><tspan dy="3" rotate="3">u</tspan><tspan dy="-1" rotate="-2">s</tspan><tspan dy="-2" rotate="4">t</tspan>
   </text>
-  <text x="230" y="140" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700" letter-spacing="1" fill="#1AAAC0">
-    <tspan dy="0">M</tspan><tspan dy="5">a</tspan><tspan dy="-5">d</tspan><tspan dy="5">n</tspan><tspan dy="-5">e</tspan><tspan dy="5">s</tspan><tspan dy="-5">s</tspan>
+  <text x="188" y="112" font-size="64" font-family="'Chewy', cursive" fill="#12889B" letter-spacing="2">
+    <tspan rotate="4">M</tspan><tspan dy="5" rotate="-5">a</tspan><tspan dy="-9" rotate="3">d</tspan><tspan dy="8" rotate="-3">n</tspan><tspan dy="-6" rotate="5">e</tspan><tspan dy="5" rotate="-4">s</tspan><tspan dy="-5" rotate="4">s</tspan>
   </text>
-  <text x="13" y="190" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" letter-spacing="1" fill="#1F3864">MILD FOR PARENTS. WILD FOR KIDS.</text>
+  <text x="78" y="185" font-size="17.5" font-weight="500" font-family="Arial, Helvetica, sans-serif" fill="#1F3864" letter-spacing="1.1">MILD FOR PARENTS. WILD FOR KIDS.</text>
 </svg>
