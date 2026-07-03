@@ -1,6 +1,9 @@
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <title>JustMadness monogram</title>
-  <rect x="1" y="1" width="198" height="198" rx="44" fill="#FFFFFF" stroke="#E5E5E5" stroke-width="2"/>
-  <text x="60" y="135" font-family="Arial, Helvetica, sans-serif" font-size="100" font-weight="700" text-anchor="middle" fill="#E97D1F">J</text>
-  <text x="138" y="135" font-family="Arial, Helvetica, sans-serif" font-size="100" font-weight="700" text-anchor="middle" fill="#1AAAC0">M</text>
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <title>JustMadness monogram — JM</title>
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Chewy&amp;display=swap');</style>
+  </defs>
+  <rect x="3" y="3" width="114" height="114" rx="22" fill="#FFFFFF" stroke="#1F3864" stroke-width="5"/>
+  <text x="38" y="84" font-size="68" font-family="'Chewy', cursive" fill="#E97D1F" text-anchor="middle">J</text>
+  <text x="82" y="84" font-size="68" font-family="'Chewy', cursive" fill="#12889B" text-anchor="middle">M</text>
 </svg>
