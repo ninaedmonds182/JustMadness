@@ -11,7 +11,6 @@
 body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 .jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
 .jm-nav-left a{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.jm-nav-tag{color:#1a3a5c;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
 .jm-nav-mid{display:flex;align-items:center;gap:24px;}
 .jm-nav-mid a{color:#1a3a5c;font-size:14px;font-weight:700;text-decoration:none;}
 .jm-nav-mid a:hover,.jm-nav-mid a.active{color:#E8651A;}
@@ -31,6 +30,8 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 .section.dark .sub{color:#a0bcd0;}
 .section p{font-size:16px;line-height:1.8;color:#445;margin-bottom:14px;}
 .section.dark p{color:#a0bcd0;}
+
+/* Process steps */
 .process-list{display:flex;flex-direction:column;gap:24px;margin:28px 0;}
 .process-item{display:flex;gap:16px;align-items:flex-start;}
 .process-num{width:38px;height:38px;border-radius:50%;background:#E8651A;color:#fff;font-weight:900;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
@@ -38,12 +39,16 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 .process-time{font-size:12px;font-weight:700;color:#E8651A;background:#fff3e0;border-radius:20px;padding:3px 12px;white-space:nowrap;}
 .process-text p{font-size:14px;color:#556;line-height:1.6;margin:0;}
 .process-note{font-size:16px;font-weight:900;color:#1a3a5c;text-align:center;margin-top:28px;padding-top:24px;border-top:1.5px solid #f0e8e0;}
+
+/* Timeline */
 .jm-timeline{background:rgba(232,101,26,0.12);border-radius:14px;padding:24px;border:1px solid rgba(232,101,26,0.3);margin:24px 0;}
 .jm-timeline p.title{font-size:14px;color:#f5c8a0;font-weight:700;margin-bottom:12px;}
 .step{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
 .step .dot{width:8px;height:8px;background:#E8651A;border-radius:50%;flex-shrink:0;margin-top:6px;}
 .step span{font-size:14px;color:#f5c8a0;line-height:1.5;}
 .closing-line{font-size:17px;color:#fff;font-weight:700;line-height:1.7;margin-top:20px;}
+
+/* Levels */
 .jm-levels{display:flex;gap:12px;margin:28px 0;}
 .jm-level{flex:1;border-radius:14px;padding:18px 14px;text-align:center;border:2px solid transparent;}
 .jm-level.mild{background:#e8f4fb;border-color:#b0d4e8;}
@@ -56,25 +61,36 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 .jm-level .lvl-icon{font-size:28px;margin-bottom:8px;}
 .jm-level h3{font-size:14px;font-weight:900;color:#1a3a5c;margin-bottom:4px;}
 .jm-level p{font-size:12px;color:#667;line-height:1.4;margin:0;}
-.setup-list{display:flex;flex-direction:column;gap:10px;margin:20px 0;}
-.setup-item{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:700;color:#334;}
-.setup-item .dot{width:10px;height:10px;background:#3A7FA0;border-radius:50%;flex-shrink:0;}
-.payoff{font-size:17px;font-weight:900;color:#1a3a5c;margin-top:24px;line-height:1.5;}
+
+/* Tip box */
+.tip-box{background:#fff3e0;border-left:4px solid #E8651A;border-radius:0 12px 12px 0;padding:16px 20px;margin:20px 0;font-size:14px;color:#5a3a1a;line-height:1.7;}
+.tip-box strong{display:block;font-size:15px;color:#E8651A;margin-bottom:4px;}
+
+/* Info box */
+.info-box{background:#e8f4fb;border-left:4px solid #3A7FA0;border-radius:0 12px 12px 0;padding:16px 20px;margin:20px 0;font-size:14px;color:#1a3a5c;line-height:1.7;}
+.info-box strong{display:block;font-size:15px;color:#3A7FA0;margin-bottom:4px;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:0;}
+.faq-item{border-bottom:1.5px solid #f0e8e0;padding:0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:'Nunito',sans-serif;font-size:16px;font-weight:900;color:#1a3a5c;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:18px 0;background:none;border:none;width:100%;text-align:left;}
+.faq-arrow{color:#E8651A;font-size:1.2rem;flex-shrink:0;margin-left:10px;transition:transform .2s;}
+.faq-a{font-size:15px;color:#556;padding:0 0 18px;line-height:1.75;display:none;}
+.faq-a ul{margin:10px 0 0 18px;display:flex;flex-direction:column;gap:6px;}
+.faq-a li{font-size:14px;color:#667;}
+
+/* CTA */
 .jm-cta{background:#1a3a5c;padding:48px 32px;text-align:center;}
 .jm-cta h2{font-size:24px;font-weight:900;color:#fff;margin-bottom:12px;}
 .jm-cta p{font-size:16px;color:#a0bcd0;margin-bottom:28px;}
 .jm-cta-btn{display:inline-block;background:#E8651A;color:#fff;border-radius:40px;padding:14px 36px;font-size:16px;font-weight:900;text-decoration:none;font-family:'Nunito',sans-serif;}
+
+/* Footer */
 .jm-footer{background:#1a3a5c;color:#a0bcd0;text-align:center;padding:24px;font-size:13px;border-top:1px solid rgba(255,255,255,0.08);}
 .jm-footer a{color:#a0bcd0;}
-@media(max-width:700px){
-  .jm-nav{padding:12px 16px;flex-wrap:wrap;gap:8px;}
-  .jm-nav-mid{display:none;}
-  .jm-hamburger{display:flex !important;}
 
-  .jm-levels{flex-direction:column;gap:10px;}
-  .section{padding:40px 20px;}
-}
-
+/* Mobile nav */
 .jm-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;}
 .jm-hamburger span{display:block;width:24px;height:3px;background:#1a3a5c;border-radius:2px;}
 .jm-mobile-overlay{display:none;position:fixed;inset:0;background:rgba(26,58,92,0.45);z-index:99;}
@@ -84,6 +100,14 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 .jm-mobile-menu a{color:#1a3a5c;font-size:17px;font-weight:700;text-decoration:none;padding:15px 4px;border-bottom:1px solid #f0e8e0;}
 .jm-mobile-menu a.active{color:#E8651A;}
 .jm-mobile-close{position:absolute;top:18px;right:18px;background:none;border:none;font-size:30px;line-height:1;color:#1a3a5c;cursor:pointer;}
+
+@media(max-width:700px){
+  .jm-nav{padding:12px 16px;flex-wrap:wrap;gap:8px;}
+  .jm-nav-mid{display:none;}
+  .jm-hamburger{display:flex !important;}
+  .jm-levels{flex-direction:column;gap:10px;}
+  .section{padding:40px 20px;}
+}
 </style>
 </head>
 <body>
@@ -103,29 +127,33 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
   <div class="jm-nav-right">
     <button class="jm-hamburger" onclick="document.querySelector('.jm-mobile-menu').classList.add('open');document.querySelector('.jm-mobile-overlay').classList.add('open');"><span></span><span></span><span></span></button>
     <a href="missions.html" class="jm-btn-orange">Get Your Mission</a>
-    <a href="login.html" class="jm-btn-teal">Enter Code</a>
+    <a href="welcome.html" class="jm-btn-teal">Already purchased?</a>
   </div>
 </nav>
 <div class="jm-mobile-overlay" onclick="this.classList.remove('open');document.querySelector('.jm-mobile-menu').classList.remove('open');"></div>
 <div class="jm-mobile-menu">
   <button class="jm-mobile-close" onclick="document.querySelector('.jm-mobile-menu').classList.remove('open');document.querySelector('.jm-mobile-overlay').classList.remove('open');">&times;</button>
   <a href="index.html">Home</a>
-    <a href="how-it-works.html" class="active">How It Works</a>
-    <a href="missions.html">Party Missions</a>
-    <a href="about.html">About</a>
+  <a href="how-it-works.html" class="active">How It Works</a>
+  <a href="missions.html">Party Missions</a>
+  <a href="about.html">About</a>
 </div>
 
 
+<!-- ═══ HERO ═══ -->
 <div class="jm-page-hero">
   <h1>How It Works</h1>
-  <p>Everything you need to know before the madness begins.</p>
+  <p>Everything you need to know before the madness begins — from purchase to party.</p>
 </div>
 
+
+<!-- ═══ CHRONOLOGY ═══ -->
 <div class="section">
   <div class="section-inner">
-    <h2>Four steps. That's it.</h2>
+    <h2>From purchase to party — in four steps.</h2>
     <p class="sub">Here's exactly what happens, start to finish.</p>
     <div class="process-list">
+
       <div class="process-item">
         <div class="process-num">1</div>
         <div class="process-text">
@@ -133,32 +161,49 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
           <p>Browse the missions and pick the one that suits your party. Currently Dog's Bakery is available — more on the way.</p>
         </div>
       </div>
+
       <div class="process-item">
         <div class="process-num">2</div>
         <div class="process-text">
-          <h3>Personalise and choose your track <span class="process-time">⏱ 10–15 minutes</span></h3>
-          <p>Enter your access code, add the children's names, sort them into teams and pick your timeline: the <strong>4-hour Full Baking Track</strong> — baking, challenges and decorating all included — or the quicker <strong>3-hour Decorating-Only Track</strong> if you'd rather skip straight to the icing.</p>
+          <h3>Purchase &amp; receive your code <span class="process-time">⏱ Instant</span></h3>
+          <p>Complete payment via PayPal. Your unique access code is sent to your email straight away. Each code is personal, one-use, and valid for 14 days from first activation — so you can buy ahead of the party without any rush.</p>
         </div>
       </div>
+
       <div class="process-item">
         <div class="process-num">3</div>
         <div class="process-text">
-          <h3>Prepare the challenges <span class="process-time">⏱ 30–45 minutes</span></h3>
-          <p>Follow your step-by-step setup guide. Hide the recipe codes, get the space ready and stage the challenges. Go Mild and you'll be done in 30. Go Bonkers and you'll want the full 45. The guide tells you exactly what to do — zero guesswork.</p>
+          <h3>Enter your code &amp; set up <span class="process-time">⏱ 10–15 min on device + 30–45 min physical prep</span></h3>
+          <p>Visit <strong>justmadness.co.uk/welcome</strong>, enter your code and you're in. Add the children's names, choose your game difficulty levels, select your cake recipes and download your printables — all from the same device you'll use on party day. Then follow the setup guide to hide the codes and stage the challenges in the room.</p>
+          <div style="margin-top:14px;background:#fff3cd;border:2px solid #E8651A;border-radius:12px;padding:18px 20px;">
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <span style="font-size:1.6rem;flex-shrink:0;">⚠️</span>
+              <div>
+                <strong style="display:block;font-size:15px;color:#b45309;margin-bottom:6px;">Set up on the device you will use on party day — not a different one.</strong>
+                <p style="font-size:14px;color:#5a3a1a;line-height:1.7;margin:0;">
+                  Everything is saved <strong>directly on the device</strong> — names, codes, photos, game levels, recipes. There is no cloud sync, no account, no way to transfer between devices. If you do your setup on a laptop and then try to run the party on a tablet, the tablet will have nothing on it. Pick one device, use it for setup, keep it for party day. This is also by design — keeping children's data stored locally on your own device means it never passes through any server, stays entirely in your control, and is deleted the moment you clear your browser data.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="process-item">
         <div class="process-num">4</div>
         <div class="process-text">
           <h3>Hand it over <span class="process-time">⏱ Instant</span></h3>
-          <p>Give the device to the children. They're in charge now. You're their assistant — an important one, but an assistant nonetheless.</p>
+          <p>Lock the party mode and give the device to the children. They're in charge now. You're their assistant — an important one, but an assistant nonetheless.</p>
         </div>
       </div>
+
     </div>
-    <p class="process-note">Then sit back and watch the children take over.</p>
+    <p class="process-note">Then sit back and watch the children take over. 🐾</p>
   </div>
 </div>
 
+
+<!-- ═══ DURING THE MISSION ═══ -->
 <div class="section dark">
   <div class="section-inner">
     <h2>What happens during the mission?</h2>
@@ -169,40 +214,139 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
       <div class="step"><div class="dot"></div><span>A short video sets the scene — then the device goes down and the real chaos begins.</span></div>
       <div class="step"><div class="dot"></div><span>They work in teams, crack codes, run challenges and unlock each stage of the bake.</span></div>
       <div class="step"><div class="dot"></div><span>They bake real things, decorate real cakes, and judge each other with great seriousness.</span></div>
-      <div class="step"><div class="dot"></div><span>They earn certificates with their actual names on. They feel like they genuinely achieved something.</span></div>
+      <div class="step"><div class="dot"></div><span>They earn personalised certificates with their actual names on. They feel like they genuinely achieved something.</span></div>
       <div class="step"><div class="dot"></div><span>They go home and tell their parents exactly what happened. In detail. For days.</span></div>
     </div>
+    <div class="tip-box" style="background:rgba(232,101,26,0.15);border-color:#E8651A;color:#f5c8a0;">
+      <strong style="color:#E8651A;">📺 Connect to a bigger screen</strong>
+      If you have more than 6–8 children, we'd recommend connecting the device to a TV or monitor via HDMI or screen-casting. It means everyone can see the mission screens clearly — especially during the dog identity reveal and voting screens. Makes the whole thing feel much more cinematic.
+    </div>
+    <p class="closing-line">A proper structure. A real ending. Something they'll still be talking about next week.</p>
   </div>
 </div>
 
+
+<!-- ═══ DIFFICULTY LEVELS ═══ -->
 <div class="section warm">
   <div class="section-inner">
     <h2>You set the madness level. They run wild with it.</h2>
-    <p class="sub">Three difficulty levels. Your choice. Their chaos.</p>
+    <p class="sub">Three difficulty levels. Your choice. Their chaos. You can mix and match — pick a different level per game.</p>
     <div class="jm-levels">
       <div class="jm-level mild">
         <div class="lvl-label">Level 1</div>
-        <div class="lvl-icon">🙂</div>
-        <h3>Mild</h3>
-        <p>Perfect for younger children. Structured and manageable.</p>
+        <div class="lvl-icon">🟢</div>
+        <h3>Simple</h3>
+        <p>Lower mess, lower chaos. Works well indoors with no floor protection needed.</p>
       </div>
       <div class="jm-level mad">
         <div class="lvl-label">Level 2</div>
-        <div class="lvl-icon">😜</div>
+        <div class="lvl-icon">🤪</div>
         <h3>Mad</h3>
-        <p>More teamwork. More movement. More laughs.</p>
+        <p>More teamwork, more movement, more laughs.</p>
       </div>
       <div class="jm-level bonkers">
         <div class="lvl-label">Level 3</div>
-        <div class="lvl-icon">🤪</div>
+        <div class="lvl-icon">🤯</div>
         <h3>Bonkers</h3>
-        <p>Maximum madness. The kind children will still be talking about next week.</p>
+        <p>Water, flour, frozen things. Best outdoors or with plastic sheets down. Maximum madness.</p>
       </div>
     </div>
-    <p>You also choose the cakes. Cupcakes, layer cakes, biscuits — you pick what gets made and decorated. The children discover their mission and immediately decide they know better than any recipe. They're not entirely wrong.</p>
+    <p>You also choose the cakes. Cupcakes, layer cakes, biscuits — you pick what gets made and decorated. The children discover their mission one ingredient at a time as they complete each game.</p>
   </div>
 </div>
 
+
+<!-- ═══ TOP TIP — ARRIVAL ACTIVITY ═══ -->
+<div class="section">
+  <div class="section-inner">
+    <h2>Make it even better.</h2>
+    <p class="sub">One thing that consistently makes a big difference.</p>
+    <p>If you want to make the experience feel extra special from the moment children walk in — especially when guests don't all know each other — we'd suggest picking up a few items before the party:</p>
+    <div class="tip-box">
+      <strong>🎨 Optional arrival activity: Decorate your apron</strong>
+      Buy a plain white cotton apron and baker hat per child (inexpensive from most craft or kitchen shops). Lay out fabric felt pens on the table. When children arrive, they immediately get stuck into decorating their own apron and hat while waiting for others. It's a great icebreaker, it gives arriving children something purposeful to do, and it means by the time everyone's there they're already in costume and in the mood. No awkward waiting around.
+    </div>
+    <p style="font-size:14px;color:#667;">You'll need: plain white cotton aprons, plain baker hats, fabric felt-tip pens. Available cheaply from craft shops, Amazon, or Hobbycraft.</p>
+  </div>
+</div>
+
+
+<!-- ═══ FAQ ═══ -->
+<div class="section warm">
+  <div class="section-inner">
+    <h2>Frequently asked questions</h2>
+    <p class="sub">The things most people want to know before they buy.</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What age is this suitable for? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          Most families find it works well for ages 8–12, though younger or older kids can enjoy it too. The three difficulty levels mean you can adjust the challenge to suit the group. For younger children (6–7), Simple level works well — and if there's reading involved, you as the assistant can read the mission screens aloud or help where needed. The children lead, but you're always nearby.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Do I need a printer? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          A printer is preferable — it makes hiding the game codes and handing out wristbands much smoother. But if you don't have one, pen and paper works perfectly well. You can handwrite the codes onto small pieces of card and write children's names on paper strips for wristbands. It takes a few extra minutes but it works just as well.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How many children can play? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          It depends on your space and your tolerance for organised chaos. The app supports multiple teams, so there's no fixed maximum. That said, here's what we'd suggest:
+          <ul>
+            <li><strong>2–3 children per team</strong> is the sweet spot — everyone stays involved, no one gets lost in the chaos.</li>
+            <li><strong>Kitchen size matters</strong> for the baking section. Can you comfortably fit 3–4 teams around the worktops? If it's tight, consider 2 teams with slightly more children each.</li>
+            <li><strong>The more teams, the more mayhem</strong> — which is the point. But more than 4 teams gets logistically complex during games. Plan accordingly.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Indoors or outdoors? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          Most games work perfectly indoors. A couple of the Bonkers-level options involve water, flour or messy ingredients — for those, either go outdoors or put plastic sheets down first. The setup guide tells you exactly which games are messy and flags this clearly before the party.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I change my setup after I've started? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          Yes — at any point, even mid-party. There's an adult unlock button in the top bar of the app. Tap it, make your changes, and lock it again. The children see nothing.
+          <br><br>
+          One important note: <strong>setup must be done on the same device you use on party day.</strong> All data — names, photos, codes, recipes, progress — is saved directly on that device's browser storage. There's no cloud, no account, no syncing. This is intentional: it keeps children's data private and on your device only. Just make sure you don't clear your browser data between setup and party day.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How long does setup take? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          Around 10–15 minutes on the device (entering names, choosing levels, downloading printables) plus 30–45 minutes of physical preparation (hiding codes, setting up challenges, preparing the space). Go Simple and the physical prep is closer to 20 minutes. Go Bonkers and allow the full 45. The step-by-step guide walks you through every single step — there's no guesswork.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does it work on any device? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          Yes — it runs in any modern browser on phone, tablet, laptop or desktop. No app to download. We'd recommend using a tablet or laptop on party day so the screen is large enough for the children to see clearly. If you have a larger group, connecting to a TV or monitor is even better.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is my data safe? <span class="faq-arrow">＋</span></button>
+        <div class="faq-a">
+          Everything is stored locally on your device — names, photos, codes, setup. Nothing is uploaded to any server. No account required. To permanently delete all data, simply clear your browser's site data. It's that simple.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ CTA ═══ -->
 <div class="jm-cta">
   <h2>Ready to pick your mission?</h2>
   <p>See what's available and get started.</p>
@@ -212,6 +356,22 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 <div class="jm-footer">
   &copy; 2026 JustMadness &nbsp;&middot;&nbsp; <a href="mailto:info@justmadness.co.uk">info@justmadness.co.uk</a> &nbsp;&middot;&nbsp; Mild for Parents. Wild for Kids.
 </div>
+
+<script>
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var arrow  = btn.querySelector('.faq-arrow');
+  var open   = answer.style.display === 'block';
+  // Close all
+  document.querySelectorAll('.faq-a').forEach(function(a){ a.style.display='none'; });
+  document.querySelectorAll('.faq-arrow').forEach(function(ar){ ar.textContent='＋'; ar.style.transform=''; });
+  // Open clicked
+  if (!open) {
+    answer.style.display = 'block';
+    arrow.textContent = '－';
+  }
+}
+</script>
 
 </body>
 </html>
