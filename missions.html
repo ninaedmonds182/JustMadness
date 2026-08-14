@@ -6,14 +6,7 @@
 <title>Dog's Bakery — JustMadness</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="justmadness-favicon.svg">
-<style>
-
-
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
-
-/* NAV */
-.jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
+<style>.jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
 .jm-nav-left a{display:flex;align-items:center;gap:12px;text-decoration:none;}
 .jm-nav-left svg.jm-logo{height:54px;width:auto;display:block;}
 .jm-nav-tag{color:#1a3a5c;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
@@ -23,6 +16,11 @@ body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
 .jm-nav-right{display:flex;align-items:center;gap:10px;}
 .jm-btn-orange{background:#E8651A;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
 .jm-btn-teal{background:#3A7FA0;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
+
+/* NAV */
+.jm-logo{height:52px;width:auto;}
 
 /* HAMBURGER */
 .jm-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;}
@@ -126,7 +124,7 @@ body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
 .jm-footer a{color:#889;text-decoration:none;}
 
 @media(max-width:700px){
-  .jm-nav-mid,.jm-nav-right .jm-btn-orange{display:none;}
+  
   .jm-hamburger{display:flex;}
   .jm-hero{padding:48px 20px 36px;}
   .jm-hero h1{font-size:28px;}
@@ -173,7 +171,7 @@ body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
   </div>
   <div class="jm-nav-right">
     <button class="jm-hamburger" onclick="document.querySelector('.jm-mobile-menu').classList.add('open');document.querySelector('.jm-mobile-overlay').classList.add('open');"><span></span><span></span><span></span></button>
-    <a href="missions.html" class="jm-btn-orange">Get Your Mission</a>
+    
     <a href="welcome.html" class="jm-btn-teal">Already purchased?</a>
   </div>
 </nav>
@@ -406,7 +404,7 @@ body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
     <div class="candles">They won't remember waiting for their turn.<br>They won't remember watching someone else perform.</div>
     <div style="font-size:18px;color:#a0bcd0;line-height:1.8;margin:16px 0;">They'll remember saving Dog Baking School.<br>They'll remember creating the cake together.<br>They'll remember laughing with their friends.</div>
     <div class="big-line">Because the best parties aren't watched. They're lived.</div>
-    <a href="#" class="jm-closing-btn">Get Your Mission</a>
+    
   </div>
 </div>
 
