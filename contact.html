@@ -6,17 +6,18 @@
 <title>Contact — JustMadness</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="justmadness-favicon.svg">
-<style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
-.jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
+<style>.jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
 .jm-nav-left a{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.jm-nav-left svg.jm-logo{height:54px;width:auto;display:block;}
+.jm-nav-tag{color:#1a3a5c;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
 .jm-nav-mid{display:flex;align-items:center;gap:24px;}
 .jm-nav-mid a{color:#1a3a5c;font-size:14px;font-weight:700;text-decoration:none;}
 .jm-nav-mid a:hover,.jm-nav-mid a.active{color:#E8651A;}
 .jm-nav-right{display:flex;align-items:center;gap:10px;}
 .jm-btn-orange{background:#E8651A;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
 .jm-btn-teal{background:#3A7FA0;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 
 .jm-page-hero{background:linear-gradient(160deg,#fff8f2 0%,#e8f4fb 100%);padding:56px 32px;text-align:center;}
 .jm-page-hero h1{font-size:36px;font-weight:900;color:#1a3a5c;margin-bottom:12px;}
@@ -81,8 +82,8 @@ textarea{min-height:140px;resize:vertical;line-height:1.6;}
 .jm-mobile-close{position:absolute;top:18px;right:18px;background:none;border:none;font-size:30px;line-height:1;color:#1a3a5c;cursor:pointer;}
 
 @media(max-width:700px){
-  .jm-nav{padding:12px 16px;flex-wrap:wrap;gap:8px;}
-  .jm-nav-mid{display:none;}
+  
+  
   .jm-hamburger{display:flex !important;}
   .contact-wrap{padding:40px 20px;}
   .alt-row{flex-direction:column;align-items:center;}
