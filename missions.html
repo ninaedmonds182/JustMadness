@@ -13,15 +13,16 @@
 body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
 
 /* NAV */
-.jm-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:50;}
-.jm-nav-left a{display:flex;align-items:center;text-decoration:none;}
-.jm-logo{height:52px;width:auto;}
-.jm-nav-mid{display:flex;gap:28px;align-items:center;}
-.jm-nav-mid a{text-decoration:none;font-size:15px;font-weight:700;color:#1a3a5c;transition:color 0.2s;}
+.jm-nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid #f0e8e0;position:sticky;top:0;z-index:10;}
+.jm-nav-left a{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.jm-nav-left svg.jm-logo{height:54px;width:auto;display:block;}
+.jm-nav-tag{color:#1a3a5c;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;}
+.jm-nav-mid{display:flex;align-items:center;gap:24px;}
+.jm-nav-mid a{color:#1a3a5c;font-size:14px;font-weight:700;text-decoration:none;}
 .jm-nav-mid a:hover,.jm-nav-mid a.active{color:#E8651A;}
-.jm-nav-right{display:flex;gap:12px;align-items:center;}
-.jm-btn-orange{display:inline-block;background:#E8651A;color:#fff;padding:10px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:14px;transition:background 0.2s;}
-.jm-btn-orange:hover{background:#cf5815;}
+.jm-nav-right{display:flex;align-items:center;gap:10px;}
+.jm-btn-orange{background:#E8651A;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
+.jm-btn-teal{background:#3A7FA0;color:#fff;border:none;border-radius:30px;padding:9px 18px;font-size:13px;font-weight:700;font-family:'Nunito',sans-serif;text-decoration:none;white-space:nowrap;}
 
 /* HAMBURGER */
 .jm-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;}
