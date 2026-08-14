@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Great Dog Baking School — JustMadness</title>
-<meta name="description" content="Children are recruited by Biscuit to save Dog Baking School. Six missions. One lost recipe. One celebration cake. Ages 8-12.">
+<title>Dog's Bakery — JustMadness</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="justmadness-favicon.svg">
 <style>
+
 
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
@@ -135,6 +135,7 @@ body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
   .jm-img-full{padding:0 12px;}
 }
 
+
 </style>
 </head>
 <body>
@@ -165,22 +166,23 @@ body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
   </div>
   <div class="jm-nav-mid">
     <a href="index.html">Home</a>
-    <a href="dogs-bakery.html" class="active">Dogs' Bakery</a>
+    <a href="missions.html" class="active">Missions</a>
     <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
   <div class="jm-nav-right">
-    <a href="dogs-bakery.html" class="jm-btn-orange">Get Your Mission</a>
+    <button class="jm-hamburger" onclick="document.querySelector('.jm-mobile-menu').classList.add('open');document.querySelector('.jm-mobile-overlay').classList.add('open');"><span></span><span></span><span></span></button>
+    <a href="missions.html" class="jm-btn-orange">Get Your Mission</a>
+    <a href="welcome.html" class="jm-btn-teal">Already purchased?</a>
   </div>
-  <button class="jm-hamburger" aria-label="Menu" onclick="document.querySelector('.jm-mobile-menu').classList.add('open');document.querySelector('.jm-mobile-overlay').classList.add('open');">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 <div class="jm-mobile-overlay" onclick="this.classList.remove('open');document.querySelector('.jm-mobile-menu').classList.remove('open');"></div>
 <div class="jm-mobile-menu">
-  <button class="jm-mobile-close" aria-label="Close menu" onclick="document.querySelector('.jm-mobile-menu').classList.remove('open');document.querySelector('.jm-mobile-overlay').classList.remove('open');">&times;</button>
+  <button class="jm-mobile-close" onclick="document.querySelector('.jm-mobile-menu').classList.remove('open');document.querySelector('.jm-mobile-overlay').classList.remove('open');">&times;</button>
   <a href="index.html">Home</a>
-  <a href="dogs-bakery.html" class="active">Dogs' Bakery</a>
-  <a href="about.html">About</a>
+    <a href="missions.html" class="active">Missions</a>
+    <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <div class="jm-hero">
@@ -414,8 +416,6 @@ body{font-family:"Nunito",sans-serif;background:#fff;color:#1a3a5c;}
 <div class="jm-footer">
   &copy; 2026 JustMadness &nbsp;&middot;&nbsp; <a href="mailto:info@justmadness.co.uk">info@justmadness.co.uk</a> &nbsp;&middot;&nbsp; Mild for Parents. Wild for Kids.
 </div>
-
-
 
 </body>
 </html>
