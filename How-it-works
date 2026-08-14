@@ -139,6 +139,7 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
   </div>
   <div class="jm-nav-mid">
     <a href="index.html">Home</a>
+    <a href="how-it-works.html" class="active">How It Works</a>
     <a href="missions.html">Missions</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -153,6 +154,7 @@ body{font-family:'Nunito',sans-serif;background:#fff;color:#1a3a5c;}
 <div class="jm-mobile-menu">
   <button class="jm-mobile-close" onclick="document.querySelector('.jm-mobile-menu').classList.remove('open');document.querySelector('.jm-mobile-overlay').classList.remove('open');">&times;</button>
   <a href="index.html">Home</a>
+    <a href="how-it-works.html" class="active">How It Works</a>
     <a href="missions.html">Missions</a>
     <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
